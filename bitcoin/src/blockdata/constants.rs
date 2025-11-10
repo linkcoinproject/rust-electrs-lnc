@@ -43,16 +43,16 @@ pub const MIN_TRANSACTION_WEIGHT: u32 = 4 * 60;
 pub const WITNESS_SCALE_FACTOR: usize = 4;
 /// The maximum allowed number of signature check operations in a block.
 pub const MAX_BLOCK_SIGOPS_COST: i64 = 80_000;
-/// Mainnet (bitcoin) pubkey address prefix.
-pub const PUBKEY_ADDRESS_PREFIX_MAIN: u8 = 16;
-/// Mainnet (bitcoin) script address prefix.
+/// Mainnet (federalreserveCoin) pubkey address prefix.
+pub const PUBKEY_ADDRESS_PREFIX_MAIN: u8 = 48;
+/// Mainnet (federalreserveCoin) script address prefix.
 pub const SCRIPT_ADDRESS_PREFIX_MAIN: u8 = 5;
 /// Test (signet, regtest) pubkey address prefix.
 pub const PUBKEY_ADDRESS_PREFIX_TEST: u8 = 111; // 0x6f
 /// Test (tesnet, signet, regtest) script address prefix.
-pub const SCRIPT_ADDRESS_PREFIX_TEST: u8 = 5; // 0xc4
-// Regtest (junkcoin) pubkey address prefix.
-pub const PUBKEY_ADDRESS_PREFIX_REGTEST: u8 = 47; // 0x2f
+pub const SCRIPT_ADDRESS_PREFIX_TEST: u8 = 196; // 0xc4
+// Regtest pubkey address prefix.
+pub const PUBKEY_ADDRESS_PREFIX_REGTEST: u8 = 111; // 0x6f
 /// The maximum allowed script size.
 pub const MAX_SCRIPT_ELEMENT_SIZE: usize = 520;
 /// How may blocks between halvings.

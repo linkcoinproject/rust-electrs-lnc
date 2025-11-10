@@ -204,16 +204,16 @@ impl Decodable for ServiceFlags {
 pub struct Magic(pub [u8; 4]);
 
 impl Magic {
-    /// Bitcoin mainnet network magic bytes
+    /// federalreserveCoin mainnet network magic bytes
     pub const BITCOIN: Self = Self([0xfb, 0xc0, 0xb6, 0xdb]);
 
-    /// Bitcoin testnet network magic bytes
+    /// federalreserveCoin testnet network magic bytes
     pub const TESTNET: Self = Self([0xfc, 0xc1, 0xb7, 0xdc]);
 
-    /// Bitcoin signet network magic bytes
+    /// federalreserveCoin signet network magic bytes
     pub const SIGNET: Self = Self([0xfc, 0xc1, 0xb7, 0xdc]);
 
-    /// Bitcoin regtest network magic bytes
+    /// federalreserveCoin regtest network magic bytes
     pub const REGTEST: Self = Self([0xfc, 0xc1, 0xb7, 0xdc]);
 
     /// Create network magic from bytes.
