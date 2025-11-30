@@ -279,15 +279,15 @@ mod tests {
 
     #[test]
     fn serialize_test() {
-        assert_eq!(serialize(&Network::Bitcoin.magic()), &[0xf9, 0xbe, 0xb4, 0xd9]);
-        assert_eq!(serialize(&Network::Testnet.magic()), &[0x0b, 0x11, 0x09, 0x07]);
-        assert_eq!(serialize(&Network::Signet.magic()), &[0x0a, 0x03, 0xcf, 0x40]);
-        assert_eq!(serialize(&Network::Regtest.magic()), &[0xfa, 0xbf, 0xb5, 0xda]);
+        assert_eq!(serialize(&Network::Bitcoin.magic()), &[0xfb, 0xc0, 0xb6, 0xdb]);
+        assert_eq!(serialize(&Network::Testnet.magic()), &[0xfc, 0xc1, 0xb7, 0xdc]);
+        assert_eq!(serialize(&Network::Signet.magic()), &[0xfc, 0xc1, 0xb7, 0xdd]);
+        assert_eq!(serialize(&Network::Regtest.magic()), &[0xfc, 0xc1, 0xb7, 0xde]);
 
-        assert_eq!(deserialize(&[0xf9, 0xbe, 0xb4, 0xd9]).ok(), Some(Network::Bitcoin.magic()));
-        assert_eq!(deserialize(&[0x0b, 0x11, 0x09, 0x07]).ok(), Some(Network::Testnet.magic()));
-        assert_eq!(deserialize(&[0x0a, 0x03, 0xcf, 0x40]).ok(), Some(Network::Signet.magic()));
-        assert_eq!(deserialize(&[0xfa, 0xbf, 0xb5, 0xda]).ok(), Some(Network::Regtest.magic()));
+        assert_eq!(deserialize(&[0xfb, 0xc0, 0xb6, 0xdb]).ok(), Some(Network::Bitcoin.magic()));
+        assert_eq!(deserialize(&[0xfc, 0xc1, 0xb7, 0xdc]).ok(), Some(Network::Testnet.magic()));
+        assert_eq!(deserialize(&[0xfc, 0xc1, 0xb7, 0xdd]).ok(), Some(Network::Signet.magic()));
+        assert_eq!(deserialize(&[0xfc, 0xc1, 0xb7, 0xde]).ok(), Some(Network::Regtest.magic()));
     }
 
     #[test]

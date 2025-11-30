@@ -211,10 +211,10 @@ impl Magic {
     pub const TESTNET: Self = Self([0xfc, 0xc1, 0xb7, 0xdc]);
 
     /// federalreserveCoin signet network magic bytes
-    pub const SIGNET: Self = Self([0xfc, 0xc1, 0xb7, 0xdc]);
+    pub const SIGNET: Self = Self([0xfc, 0xc1, 0xb7, 0xdd]);
 
     /// federalreserveCoin regtest network magic bytes
-    pub const REGTEST: Self = Self([0xfc, 0xc1, 0xb7, 0xdc]);
+    pub const REGTEST: Self = Self([0xfc, 0xc1, 0xb7, 0xde]);
 
     /// Create network magic from bytes.
     pub fn from_bytes(bytes: [u8; 4]) -> Magic { Magic(bytes) }
@@ -413,8 +413,8 @@ mod tests {
         let known_network_magic_strs = [
             ("fbc0b6db", Network::Bitcoin),
             ("fcc1b7dc", Network::Testnet),
-            ("fcc1b7dc", Network::Regtest),
-            ("fcc1b7dc", Network::Signet),
+            ("fcc1b7de", Network::Regtest),
+            ("fcc1b7dd", Network::Signet),
         ];
 
         for (magic_str, network) in &known_network_magic_strs {
